@@ -24,3 +24,12 @@ for i in range(1,1+b):
         print("* ",end="")
     print()
 
+c=5
+for i in range(1,c+1):
+    print("*"*i)
+
+d=int(input("enter the number of rows needed:"))
+for i in range(1,d+1):
+    for j in range(i):
+        print("*", end="")
+    print()
