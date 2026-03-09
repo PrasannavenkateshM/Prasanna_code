@@ -15,4 +15,4 @@ RUN pip install --upgrade pip \
 
 COPY app /app
 
-CMD ["python", "main.py"]
+ENTRYPOINT ["python", "main.py"]
