@@ -2,6 +2,7 @@ import sys
 
 from app.basics.printstatements import printstatement
 from basics.helloworld import hello_world
+from basics.printstatements import printstatement
 
 def main():
     if len(sys.argv)<2:
