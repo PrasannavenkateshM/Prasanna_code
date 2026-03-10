@@ -1,5 +1,6 @@
 import sys
 
+from app.basics.printstatements import printstatement
 from basics.helloworld import hello_world
 
 def main():
@@ -9,5 +10,7 @@ def main():
     command =sys.argv[1]
     if command=="helloworld":
         hello_world()
+    elif command=="printstatements":
+        printstatement()
 if __name__=="__main__":
     main()
