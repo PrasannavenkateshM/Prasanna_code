@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prasanna-python-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prasanna-python
+  template:
+    metadata:
+      labels:
+        app: prasanna-python
+    spec:
+      containers:
+      - name: python-app
+        image: prasannavenkateshmanigandan/prasanna-python:latest
+        command: ["python", "main.py", "printstatements"]
+        volumeMounts:
+        - name: user-data
+          mountPath: /data
+      volumes:
+      - name: user-data
+        persistentVolumeClaim:
+          claimName: user-data-pvc
