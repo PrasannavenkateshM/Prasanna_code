@@ -12,7 +12,9 @@ def printstatement():
     name_input=input("Enter your name:")
     age_input=input("Enter your age:")
     workexp_input=float(input("Enter your total work experience:"))
-    print(name_input,age_input,workexp_input, sep="\n")
+    with open("/data/user_info.txt","a") as f:
+        f.write(f"{name_input},{age_input},{workexp_input}\n")
+    print("We have added the user input to the text file")
 
 if __name__ == "__main__":
     printstatement()
