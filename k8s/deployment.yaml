@@ -15,7 +15,7 @@ spec:
       containers:
       - name: python-app
         image: prasannavenkateshmanigandan/prasanna-python:latest
-        command: ["python", "main.py", "printstatements"]
+        command: ["python", "main.py", "helloworld"]
         volumeMounts:
         - name: user-data
           mountPath: /data
